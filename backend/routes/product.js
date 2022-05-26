@@ -1,8 +1,11 @@
-const { verifyTokenAndAdmin, verifyToken, verifyTokenAndAuthorization } = require("./verifyToken");
+const Product = require("../models/Product");
+const {
+  verifyToken,
+  verifyTokenAndAuthorization,
+  verifyTokenAndAdmin,
+} = require("./verifyToken");
 
 const router = require("express").Router();
-
-
 
 //CREATE
 
@@ -78,7 +81,4 @@ router.get("/", async (req, res) => {
   }
 });
 
-
-
-module.exports = router
-
+module.exports = router;
