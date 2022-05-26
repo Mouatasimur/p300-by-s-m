@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   width: 100vw;
@@ -7,7 +8,7 @@ const Container = styled.div`
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://images.unsplash.com/photo-1601924994987-69e26d50dc26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80")
+    url("https://images.pexels.com/photos/6984661/pexels-photo-6984661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
       center;
   background-size: cover;
   display: flex;
@@ -19,7 +20,7 @@ const Wrapper = styled.div`
   width: 40%;
   padding: 20px;
   background-color: white;
-  
+  ${mobile({ width: "75%" })}
 `;
 
 const Title = styled.h1`
@@ -56,24 +57,24 @@ const Button = styled.button`
 const Register = () => {
   return (
     <Container>
-    <Wrapper>
-    <Title>CREATE AN ACCOUNT</Title>
-    <Form>
-      <Input placeholder="name" />
-      <Input placeholder="last name" />
-      <Input placeholder="username" />
-      <Input placeholder="email" />
-      <Input placeholder="password" />
-      <Input placeholder="confirm password" />
-      <Agreement>
-        By creating an account, I consent to the processing of my personal
-        data in accordance with the <b>PRIVACY POLICY</b>
-      </Agreement>
-      <Button>CREATE</Button>
-    </Form>
-  </Wrapper>
+      <Wrapper>
+        <Title>CREATE AN ACCOUNT</Title>
+        <Form>
+          <Input placeholder="name" />
+          <Input placeholder="last name" />
+          <Input placeholder="username" />
+          <Input placeholder="email" />
+          <Input placeholder="password" />
+          <Input placeholder="confirm password" />
+          <Agreement>
+            By creating an account, I consent to the processing of my personal
+            data in accordance with the <b>PRIVACY POLICY</b>
+          </Agreement>
+          <Button>CREATE</Button>
+        </Form>
+      </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default Register
+export default Register;

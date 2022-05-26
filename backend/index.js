@@ -24,12 +24,12 @@ mongoose.connect(
 
 app.use(express.json());
 app.use(cors());
-app.use("/api/users", userRoute);
-app.use("/api/auth",authRoute);
-app.use("/api/products", productRoute);
-app.use("/api/carts", cartRoute);
-app.use("/api/orders", orderRoute);
-app.use("/api/checkout", stripeRoute);
+app.use("/backend/users", userRoute);
+app.use("/backend/auth",authRoute);
+app.use("/backend/products", productRoute);
+app.use("/backend/carts", cartRoute);
+app.use("/backend/orders", orderRoute);
+app.use("/backend/checkout", stripeRoute);
 
 
 app.listen(process.env.PORT || 6000, () => {
